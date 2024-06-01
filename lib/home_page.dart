@@ -1,5 +1,6 @@
 
 
+import 'package:ag/aboutus.dart';
 import 'package:ag/cart_page.dart';
 import 'package:ag/explore_page.dart';
 import 'package:ag/profile_page.dart';
@@ -83,7 +84,7 @@ child: Container(
       
       onTap:(){
         Navigator.of(context).push(
-          MaterialPageRoute(builder: (context) => HomePage())
+          MaterialPageRoute(builder: (context) => AboutusPage())
         );
       } ,
 

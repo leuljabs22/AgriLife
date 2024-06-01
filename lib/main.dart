@@ -138,7 +138,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'theme_provider.dart';
 import 'theme.dart';
-
+import 'AboutUs.dart';
 void main() {
   runApp( 
     ChangeNotifierProvider(
