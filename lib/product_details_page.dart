@@ -14,12 +14,18 @@ class ProductDetailsPage extends StatefulWidget {
 
   @override
   State<ProductDetailsPage> createState() => _ProductDetailsPageState();
+
 }
 
 class _ProductDetailsPageState extends State<ProductDetailsPage> {
   late TapGestureRecognizer readMoreGestureRecognizer;
   bool showMore = false;
+    
 
+  
+  
+  
+  
   @override
   void initState() {
     super.initState();

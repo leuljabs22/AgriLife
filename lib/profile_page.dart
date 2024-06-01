@@ -1,7 +1,8 @@
 import 'package:ag/orders_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_iconly/flutter_iconly.dart';
-
+import 'Login.dart';
+import 'package:flutter/cupertino.dart';
 class ProfilePage extends StatelessWidget {
   const ProfilePage({super.key});
 
@@ -54,7 +55,11 @@ class ProfilePage extends StatelessWidget {
           ListTile(
             title: const Text("Logout"),
             leading: const Icon(IconlyLight.logout),
-            onTap: () {},
+            onTap: () {
+              Navigator.of(context).pushReplacement(CupertinoPageRoute(
+                        builder: (context) => LoginPage()
+              ));
+            },
           ),
         ],
       ),

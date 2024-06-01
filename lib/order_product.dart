@@ -28,10 +28,10 @@ class OrderProduct extends StatelessWidget {
       },
       behavior: HitTestBehavior.opaque,
       child: Row(
-        crossAxisAlignment: CrossAxisAlignment.start,
+         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Container(
-            height: 90,
+            height: 0,
             width: 90,
             margin: const EdgeInsets.only(right: 10, bottom: 10),
             decoration: BoxDecoration(

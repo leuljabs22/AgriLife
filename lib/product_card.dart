@@ -6,7 +6,7 @@ import '/product_details_page.dart';
 
 class ProductCard extends StatelessWidget {
   const ProductCard({super.key, required this.product});
-
+static const routeName  ='/cart_Page';
   final Product product;
 
   @override
@@ -29,7 +29,7 @@ class ProductCard extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Container(
-              height: 230,
+              height: 740,
               alignment: Alignment.topRight,
               width: double.infinity,
               padding: const EdgeInsets.all(8),
@@ -90,7 +90,8 @@ class ProductCard extends StatelessWidget {
                             );
                           },
                           iconSize: 18,
-                          icon: const Icon(Icons.add),
+                          icon: Icon(Icons.add),
+                          
                         ),
                       )
                     ],

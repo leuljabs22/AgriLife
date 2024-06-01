@@ -1,10 +1,17 @@
+
+
 import 'package:ag/cart_page.dart';
 import 'package:ag/explore_page.dart';
 import 'package:ag/profile_page.dart';
+import 'package:ag/services_page.dart';
 //import 'package:ag/services_page.dart';
 import 'package:badges/badges.dart' as badges;
 import 'package:flutter/material.dart';
 import 'package:flutter_iconly/flutter_iconly.dart';
+import 'theme.dart';
+import 'package:provider/provider.dart';
+import 'theme_provider.dart';
+
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -27,8 +34,91 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       key: _scaffoldKey,
-      drawer: const Drawer(),
+      drawer: Drawer(
+
+child: Container(
+  color: Colors.deepPurple[100],
+  child: ListView(
+    children: [
+      DrawerHeader(
+      child: Text('A G R I L I F E',
+    style: TextStyle(fontSize: 35),)
+  ),
+     ListTile(
+      leading: Icon(Icons.home),
+      title: Text('Home',
+      style: TextStyle(fontSize: 20),
+      ),
+      
+      onTap:(){
+        Navigator.of(context).push(
+          MaterialPageRoute(builder: (context) => HomePage())
+        );
+      } ,
+
+   
+     ),
+     ListTile(
+      leading: Icon(IconlyBold.call),
+      title: Text('Contact Us',
+      style: TextStyle(fontSize: 20),
+      ),
+      
+      onTap:(){
+        Navigator.of(context).push(
+          MaterialPageRoute(builder: (context) => ServicesPage())
+        );
+      } ,
+
+   
+     ),
+
+
+
+     ListTile(
+      leading:  Icon(Icons.info),
+      title: Text('About Us',
+      style: TextStyle(fontSize: 20),
+      ),
+      
+      onTap:(){
+        Navigator.of(context).push(
+          MaterialPageRoute(builder: (context) => HomePage())
+        );
+      } ,
+
+   
+     ),
+
+ListTile(
+      leading: Icon(Icons.brightness_2),
+      title: Text('Dark Mode ',
+      style: TextStyle(fontSize: 20),
+      ),
+      
+      onTap:(){
+        Provider.of<ThemeProvider>(context, listen:false).toggleTheme();
+      } ,
+
+   
+     )
+
+
+    ],
+    
+   
+    
+    
+    ),
+  
+  
+  
+  ),
+
+
+      ),
       appBar: AppBar(
+        
         centerTitle: false,
         leading: IconButton.filledTonal(
           onPressed: () {
@@ -40,7 +130,7 @@ class _HomePageState extends State<HomePage> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
-              "Hi Lidya 👋🏾",
+              "Hi ,Everyone 👋🏾",
               style: Theme.of(context).textTheme.titleMedium,
             ),
             Text("Enjoy our services",
@@ -103,5 +193,6 @@ class _HomePageState extends State<HomePage> {
         ],
       ),
     );
-  }
+
+ }
 }

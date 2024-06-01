@@ -56,3 +56,53 @@ List<Product> products = [
     rating: 3.22,
   ),
 ];
+
+
+
+
+
+
+
+
+
+// import 'package:flutter/material.dart';
+
+// import '/product.dart';
+// import 'package:google_fonts/google_fonts.dart';
+
+
+// class Products extends StatefulWidget{
+// const Products({super.key});
+// @override 
+// State<Products> createState() => _ProductState();
+
+// }
+// class _ProductState extends State<Products> {
+  
+// List products = [
+//    Product(
+//     name: "Tractor",
+//     description:
+//         "Exence the power of modern farming with our robust tractor. Whether you're tending to vast fields or small plots, this versatile machine ensures efficiency and precision. Its ergonomic design and advanced features make it a must-have for any farmer.",
+//     image: '/C:/vsRepo/Agrilife/assets/tractor.jpg',
+//     price: 377.00,
+//     unit: 'day(s)',
+//     rating: 4.35,
+//   ),
+
+
+//    Product(
+//     name: "Juicy Tomatoes",
+//     description:
+//         "Add a pop of color and flavor to your dishes with our juicy tomatoes. Grown with care, these plump and succulent tomatoes are a kitchen staple. Whether you're making sauces, salads, or sandwiches, these tomatoes are the key to culinary delight.",
+//     image: '/C:/vsRepo/Agrilife/assets/tomato.jpg',
+//     price: 6.84,
+//     unit: 'kg',
+//     rating: 3.22,
+//   ),
+
+
+
+// ];
+
+// }

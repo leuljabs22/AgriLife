@@ -135,9 +135,18 @@
 import 'package:ag/onboarding_page.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:provider/provider.dart';
+import 'theme_provider.dart';
+import 'theme.dart';
 
 void main() {
-  runApp(const MainApp());
+  runApp( 
+    ChangeNotifierProvider(
+    create: (context) => ThemeProvider(),
+    child: const MainApp(),
+    ),
+  );
+
 }
 
 class MainApp extends StatelessWidget {
@@ -147,12 +156,12 @@ class MainApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        colorScheme:
-            ColorScheme.fromSeed(seedColor: Color.fromARGB(255, 12, 35, 37)),
-        useMaterial3: true,
-        textTheme: GoogleFonts.nunitoTextTheme(),
-      ),
+       theme: Provider.of<ThemeProvider>(context).themeData,// ThemeData(
+      //   colorScheme:
+      //       ColorScheme.fromSeed(seedColor: Color.fromARGB(255, 12, 35, 37)),
+      //   useMaterial3: true,
+      //   textTheme: GoogleFonts.nunitoTextTheme(),
+      // ),
       home: const OnboardingPage(),
     );
   }
